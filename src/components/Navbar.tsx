@@ -98,13 +98,13 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden nav-item flex flex-col gap-1.5 w-7 group"
+            className="md:hidden nav-item relative w-10 h-10 flex items-center justify-end z-[1001] group"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span className={`block h-px bg-ivory transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-[4px] w-5' : 'w-7'}`} />
-            <span className={`block h-px bg-ivory transition-all duration-300 ${menuOpen ? 'opacity-0' : 'w-5'}`} />
-            <span className={`block h-px bg-ivory transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-[4px] w-5' : 'w-4'}`} />
+            <span className={`absolute h-[1px] bg-ivory transition-all duration-300 origin-center right-0 ${menuOpen ? 'top-1/2 -translate-y-1/2 rotate-45 w-6' : 'top-[35%] w-7 group-hover:w-8'}`} />
+            <span className={`absolute h-[1px] bg-ivory transition-all duration-300 origin-center right-0 top-1/2 -translate-y-1/2 ${menuOpen ? 'opacity-0 w-6' : 'w-5 group-hover:w-6'}`} />
+            <span className={`absolute h-[1px] bg-ivory transition-all duration-300 origin-center right-0 ${menuOpen ? 'top-1/2 -translate-y-1/2 -rotate-45 w-6' : 'top-[65%] w-4 group-hover:w-8'}`} />
           </button>
         </div>
       </nav>
