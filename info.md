@@ -1,31 +1,38 @@
-Using Node.js 20, Tailwind CSS v3.4.19, and Vite v7.2.4
+Using Node.js 20, Tailwind CSS v3.4.19, Vite v7.2.4, and React 19.
 
-Tailwind CSS has been set up with the shadcn theme
+Project: Alchemie Nº 7 - Luxury Perfume E-commerce Experience
 
-Setup complete: /mnt/agents/output/app
+Core Technologies:
+  - React Three Fiber & Drei for 3D visualizations
+  - GSAP & Framer Motion for scroll-driven animations
+  - Lenis for smooth scrolling
+  - Tailwind CSS + Radix UI for the user interface
+  - React Router v7 for dynamic routing
 
-Components (40+):
-  accordion, alert-dialog, alert, aspect-ratio, avatar, badge, breadcrumb,
-  button-group, button, calendar, card, carousel, chart, checkbox, collapsible,
-  command, context-menu, dialog, drawer, dropdown-menu, empty, field, form,
-  hover-card, input-group, input-otp, input, item, kbd, label, menubar,
-  navigation-menu, pagination, popover, progress, radio-group, resizable,
-  scroll-area, select, separator, sheet, sidebar, skeleton, slider, sonner,
-  spinner, switch, table, tabs, textarea, toggle-group, toggle, tooltip
+Custom UI Components:
+  CursorGlow, CustomCursor, FluidBackground, GlassBottles, Marquee,
+  Navbar, NoiseOverlay, ParticleConstellation, Preloader
 
-Usage:
+Base UI Components (shadcn/Radix):
+  accordion, alert-dialog, avatar, button, card, carousel, dialog,
+  dropdown-menu, hover-card, input, label, menubar, navigation-menu,
+  popover, scroll-area, select, separator, sheet, sidebar, slider,
+  tabs, textarea, tooltip
+
+Usage Example:
+  import { GlassBottles } from '@/components/GlassBottles'
   import { Button } from '@/components/ui/button'
-  import { Card, CardHeader, CardTitle } from '@/components/ui/card'
+  import { Preloader } from '@/components/Preloader'
 
-Structure:
-  src/sections/        Page sections
-  src/hooks/           Custom hooks
-  src/types/           Type definitions
-  src/App.css          Styles specific to the Webapp
-  src/App.tsx          Root React component
-  src/index.css        Global styles
-  src/main.tsx         Entry point for rendering the Webapp
-  index.html           Entry point for the Webapp
-  tailwind.config.js   Configures Tailwind's theme, plugins, etc.
-  vite.config.ts       Main build and dev server settings for Vite
-  postcss.config.js    Config file for CSS post-processing tools
+Project Structure:
+  src/assets/          Static assets and images
+  src/components/      Custom application components
+  src/components/ui/   Base UI components (shadcn)
+  src/contexts/        React context providers
+  src/hooks/           Custom React hooks
+  src/lib/             Utility functions
+  src/sections/        Major page sections (Hero, Formulation, etc.)
+  src/App.tsx          Main application entry and routing
+  src/index.css        Global styles and Tailwind directives
+  vite.config.ts       Vite build configuration
+  tailwind.config.js   Tailwind theme and plugins
