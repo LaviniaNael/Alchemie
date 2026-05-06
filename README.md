@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# Alchemie Nº 7
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An immersive, luxury e-commerce experience for Alchemie Nº 7, a premium fragrance brand. This application features high-performance 3D product visualizations, smooth scroll-driven animations, and a highly polished user interface designed to evoke warmth, sophistication, and luminous luxury.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Immersive 3D Experience:** WebGL-powered 3D product showcases using React Three Fiber.
+- **Scroll-Driven Animations:** Silky smooth scrolling and dynamic timeline animations powered by GSAP and Lenis.
+- **Premium UI/UX:** A meticulously crafted interface using Tailwind CSS and Radix UI components, featuring a warm rose-gold, ivory, and champagne color palette.
+- **Dynamic Routing:** Seamless multi-page transitions with React Router.
+- **Responsive Design:** A fully responsive layout that provides a flawless experience across all devices.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19 + TypeScript + Vite
+- **Styling:** Tailwind CSS + Radix UI Primitives
+- **Animations:** GSAP + Framer Motion + Lenis (Smooth Scroll)
+- **3D Graphics:** Three.js + React Three Fiber + Drei
+- **Routing:** React Router v7
+- **Icons:** Lucide React
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (v18 or higher recommended)
+- npm, yarn, or pnpm
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository (if applicable)
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `src/components/` - Reusable UI components (navigation, typography, etc.)
+- `src/sections/` - Major page sections (Hero, Formulation, etc.)
+- `src/lib/` - Utility functions and helpers
+- `src/App.tsx` - Main application entry point and routing
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Scripts
+
+- `npm run dev` - Starts the Vite development server.
+- `npm run build` - Builds the application for production.
+- `npm run lint` - Runs ESLint to check for code quality.
+- `npm run preview` - Previews the production build locally.
